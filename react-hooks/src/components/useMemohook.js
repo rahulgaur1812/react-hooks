@@ -11,8 +11,13 @@ const UseMemoHook = () => {
             color: dark ? 'white' : 'black'
         }
     }, [dark])
+
+    // const themeStyle = {
+    //     backgroundColor: dark ? 'black' : 'white',
+    //     color: dark ? 'white' : 'black'
+    // }
     useEffect(() => {
-        console.log('theme chnaged')
+        console.log('theme chnaged');
     }, [themeStyle])
     function slowfunction(num) {
         console.log('calling slow function');

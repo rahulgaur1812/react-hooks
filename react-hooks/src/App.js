@@ -4,21 +4,28 @@ import UseEffecthook from './components/useEffectHook';
 import UseMemoHook from './components/useMemohook';
 import UseRefHook from './components/useRefHook';
 import UseStateHook from './components/useStateHook';
+import MainPage from './components/useContextHook/mainPage';
+import React from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Main from './components/useContextHook2/Main';
 
 function App() {
   return (
-    <>
-      <h1>Usestate Hook</h1>
-      <UseStateHook />
-      <h1>UseEffect hook Example 1</h1>
-      <UseEffect2Hook />
-      <h1>UseEffect hook Example 2</h1>
-      <UseEffecthook />
-      <h1>Usememo hook example</h1>
-      <UseMemoHook />
-      <h1>UseRefHook hook Example</h1>
-      <UseRefHook />
-    </>
+    <Router>
+
+      <Routes>
+        <Route exact path="/" element={<UseEffect2Hook />} />
+        <Route exact path="/useeffect" element={<UseEffecthook />} />
+        <Route exact path="/usememo" element={<UseMemoHook />} />
+        <Route exact path="/useref" element={<UseRefHook />} />
+        <Route exact path="/useref" element={<UseRefHook />} />
+        <Route exact path="/usestate" element={<UseStateHook />} />
+        <Route exact path="/usecontext" element={<MainPage />} />
+        <Route exact path="/usecontext2" element={<Main />} />
+        <Route path="*" element={<UseMemoHook />} />
+      </Routes>
+
+    </Router>
   );
 }
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 const UseEffecthook = () => {
     let [resourceType, setResourceType] = useState('posts');
     const [items, setItems] = useState([]);
-    console.log('render');
+    console.log('render 11111');
     useEffect(() => {
         fetch(`https://jsonplaceholder.typicode.com/${resourceType}`)
             .then((response) => response.json())
