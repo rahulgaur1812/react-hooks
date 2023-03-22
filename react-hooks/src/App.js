@@ -8,6 +8,7 @@ import MainPage from './components/useContextHook/mainPage';
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Main from './components/useContextHook2/Main';
+import UseReducerHook from './components/useReducerHook';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route exact path="/usestate" element={<UseStateHook />} />
         <Route exact path="/usecontext" element={<MainPage />} />
         <Route exact path="/usecontext2" element={<Main />} />
+        <Route exact path="/usereducer" element={<UseReducerHook />} />
         <Route path="*" element={<UseMemoHook />} />
       </Routes>
 
