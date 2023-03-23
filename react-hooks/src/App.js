@@ -10,6 +10,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Main from './components/useContextHook2/Main';
 import UseReducerHook from './components/useReducerHook';
 import UseCallbackHook from './components/useCallbackHook/useCallbackHook';
+import CustomHook from './components/customHook/customHook';
+import UseLayoutEffectHook from './components/useLayoutEffectHook';
+import UseTransitionHook from './components/usetransitionHook';
+import List from './components/useDeferredValueHook';
+import MainApp from './components/useDeferredValueHook/main';
 
 function App() {
   return (
@@ -26,6 +31,10 @@ function App() {
         <Route exact path="/usecontext2" element={<Main />} />
         <Route exact path="/usereducer" element={<UseReducerHook />} />
         <Route exact path="/usecallback" element={<UseCallbackHook />} />
+        <Route exact path="/customHook" element={<CustomHook />} />
+        <Route exact path="/uselayouteffect" element={<UseLayoutEffectHook />} />
+        <Route exact path="/useTransitionHook" element={<UseTransitionHook />} />
+        <Route exact path="/usedeferredvaluehook" element={<MainApp />} />
         <Route path="*" element={<UseMemoHook />} />
       </Routes>
 
